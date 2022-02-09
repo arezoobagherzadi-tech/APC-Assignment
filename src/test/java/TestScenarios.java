@@ -10,7 +10,7 @@ import java.net.URL;
 public class TestSetup {
 
     static AppiumDriver<MobileElement> driver;
-    CalculatorTestScenarios calculatorTestScenarios;
+    CalculatorTestCases calculatorTestScenarios;
 
 @BeforeClass
     public void openCalculator() throws MalformedURLException {
@@ -23,7 +23,7 @@ public class TestSetup {
         cap.setCapability("appActivity","com.dencreak.dlcalculator.DLCalculatorActivity");
         URL url = new URL("http://0.0.0.0:4723/wd/hub");
         driver = new AppiumDriver<MobileElement>(url, cap);
-        calculatorTestScenarios = new CalculatorTestScenarios(driver);
+        calculatorTestScenarios = new CalculatorTestCases(driver);
 
     }
 
